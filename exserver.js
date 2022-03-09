@@ -16,7 +16,7 @@ app.get('/times', function (req, res) {
 })
 
 app.post('/addTime', function (req, res) {
-	// First read existing users.
+	// First read existing time file.
 	fs.readFile( __dirname + "/" + "times.json", 'utf8', function (err, data) {
 		 data = JSON.parse( data );
 		 data["time3"] = time["time3"];
